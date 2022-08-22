@@ -93,4 +93,31 @@ public class Job {
     public int getId() {
         return id;
     }
+
+    public String toString(){
+        int id = this.getId();
+        String name = "Data not available";
+        String employer = "Data not available";
+        String location = "Data not available";
+        String positionType = "Data not available";
+        String coreCompetency = "Data not available";
+        if (!this.getName().equals("")){
+            name = this.getName();
+        }
+        if (!this.getEmployer().getValue().equals("")){
+            employer = this.getEmployer().getValue();
+        }
+        if (!this.getLocation().getValue().equals("")){
+            location = this.getLocation().getValue();
+        }
+        if (!this.getPositionType().getValue().equals("")){
+            positionType = this.getPositionType().getValue();
+        }
+        if (!this.getCoreCompetency().getValue().equals("")){
+            coreCompetency = this.getCoreCompetency().getValue();
+        }
+
+        return "\nID: " + id +"\nName: " + name + "\nEmployer: " + employer + "\nLocation: " + location
+                + "\nPosition Type: " + positionType + "\nCore Competency: " + coreCompetency + "\n";
+    }
 }
